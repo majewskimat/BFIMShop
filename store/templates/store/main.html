@@ -32,7 +32,8 @@
 		  </li>
 	    </ul>
 	    <div class="form-inline my-2 my-lg-0">
-	     	<a href="#"class="btn btn-info">Login</a>
+	     	<a href="#"class="btn btn-info mr-2">Login</a>
+	     	<a href="{% url 'register' %}"class="btn btn-info">Register</a>
 	     	
 	     	<a href="{% url 'checkout' %}">
 	    		<img  id="cart-icon" src="{% static 'images/checkout.png' %}">
@@ -45,6 +46,13 @@
 
      <div class="container">
             <br>
+			{% if messages %}
+				{% for message in messages %}
+				<div class="alert alert-{{ message.tags }}">
+					{{ message }}
+				</div>
+				{% endfor %}
+			{% endif %}
             {% block content %}
 
 
