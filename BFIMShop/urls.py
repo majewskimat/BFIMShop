@@ -16,6 +16,7 @@ Including another URLconf
 from os import stat
 from django.contrib import admin
 from django.urls import path, include
+<<<<<<< HEAD
 from store import views as store_views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -24,6 +25,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', store_views.register, name='register'),
     path('', include('store.urls', namespace='store')),
+=======
+from users import views as user_view
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('register/', user_view.register, name='register'),
+    path('', include('store.urls'), name='store-home'),
+>>>>>>> 01a81c3b29a27b296e42ed3f4587f3267584fc94
 ]
 
 if settings.DEBUG:
