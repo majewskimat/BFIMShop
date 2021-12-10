@@ -9,11 +9,18 @@
     <section class="py-5 text-center container">
       <div class="row py-lg-3">
         <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="h1 fw-bold">Kupuj u nas</h1>
+          <h1 class="h1 fw-bold">Wybierz kategorie</h1>
           <p class="lead text-muted">Albo wpierdol</p>
-          <p>
-            <a href="#" class="btn btn-primary my-2">PROMOCJE</a>
-          </p>
+          <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Kategorie
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -31,7 +38,7 @@
               <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}">
               <div class="card-body">
                 <p class="card-text">
-                  <a class="text-dark text-decoration-none" href="">{{ product.title }}</a>
+                  <a class="text-dark text-decoration-none" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">9min read</small>

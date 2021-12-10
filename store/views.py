@@ -12,6 +12,10 @@ def categories(request):
         'categories': Category.objects.all()
     }
 
+def product_all(request):
+    products = Product.products.all()
+    return render(request, 'store/home.html', {'products': products})
+
 def products(request):
     products = Product.objects.all()
     return render(request, 'store/home.html', {'products': products})
