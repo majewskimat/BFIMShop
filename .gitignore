@@ -1,3 +1,4 @@
 #Virtual Enviroments
 venv/
 env/
+node_modules/
