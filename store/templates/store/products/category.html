@@ -1,6 +1,5 @@
 {% extends '../main.html' %}
 {% load static %}
-<link rel="stylesheet" type="text/css" href="media/css/main.css">
 {% block title %}
 {% if category %}{{ category.name }}{% else %}Products{%endif %}
 {% endblock %}
@@ -13,7 +12,22 @@
       <div class="row py-lg-3">
         <div class="col-lg-6 col-md-8 mx-auto">
           <h1 class="h1 fw-bold">{{category.name|title}}</h1> 
-         
+          <p class="lead text-muted">____________</p>
+          <div class="bd-example">
+            <div class="dropdown"> 
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Kategoria
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="{% url "store:product_all" %}">Wszystkie produkty</a></li>
+                {% for c in categories %}
+                <li>
+                  <a class="dropdown-item" href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
+                </li>
+                {% endfor %}
+              </div>
+            </div>
+            </div>
         </div>
       </div>
     </section>
