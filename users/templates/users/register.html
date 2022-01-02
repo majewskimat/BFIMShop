@@ -1,24 +1,42 @@
-{% extends "store/main.html" %}
+{% extends 'store/main.html' %}
+{% load static %}
 {% block content %}
 
-<div class="content-section">
-    <form method="POST">
-        {%csrf_token%}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Zarejestruj się</legend>
-            {{ form.as_p }}
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Zarejestuj się</button>
-        </div>
-    </form>
-    <div class="border-top pt-3">
-        <small class="text-muted">
-            Masz już konto? <a class="ml-2" href="#">Zaloguj się</a>
-        </small>
+    <div>
+        <h3>Rejestracja</h3>
+    </div>
+    <div>
+        <form method="post" action="">
+            {% csrf_token %}
+            <div>
+            Nazwa użytkownika
+            </div>
+            <div>
+            {{form.username}}
+            </div>
+            <div>
+            E-mail
+            </div>
+            <div>
+            {{form.email}}
+            </div>
+            <div>
+            Hasło
+            </div> 
+            <div>
+            {{form.password1}}
+            </div>
+            <div>
+            Powtórz hasło
+            </div> 
+            <div>
+            {{form.password2}}
+            </div>
+
+            {{form.errors}}
+
+            <input type="submit" value="Zarejestruj">
+        </form>
     </div>
 
-</div>
-
 {% endblock content %}
-
