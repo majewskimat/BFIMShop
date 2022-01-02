@@ -34,8 +34,14 @@
 				</ul>
 
 				<div class="form-inline my-2 my-lg-0">
-					<a href="#" class="btn btn-info" href="">Login</a>
-
+					{% if request.user.is_authenticated %}
+					<span>Witaj, {{request.user}}</span>
+					<a href="{% url "logout" %}" class="btn btn-info">Wyloguj</a>
+					{% else %}
+					<a href="{% url "login" %}" class="btn btn-info">Logowanie</a>
+					<a href="{% url "register" %}" class="btn btn-info">Rejestracja</a>
+					{% endif %}
+					
 					<a type="button" role="button" href="{% url "basket:basket_summary" %}"
 						class="btn btn-outline-primary">
 						<div class="d-inline-flex">1</div>

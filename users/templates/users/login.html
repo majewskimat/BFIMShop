@@ -1,0 +1,14 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>Login</label>
+        <input type="text" name="username">
+        <label>Hasło</label>
+        <input type="password" name="password">
+        <input type="submit" value="Zaloguj">
+    </form>
+
+{% endblock content %}
