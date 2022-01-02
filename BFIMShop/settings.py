@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'store.apps.StoreConfig',
     'users.apps.UsersConfig',
     'basket',
-
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
