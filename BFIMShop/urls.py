@@ -27,7 +27,7 @@ urlpatterns = [
     path('login/', user_view.loginUser, name='login'),
     path('logout/', user_view.logoutUser, name='logout'),
     path('', include('store.urls', namespace='store')),
-    path('basket/', include(('basket.urls', 'basket'), namespace='basket')), 
+    path('basket/', include('basket.urls', namespace='basket')), 
 
 
 ]
