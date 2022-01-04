@@ -2,13 +2,24 @@
 {% load static %}
 {% block content %}
 
-    <form action="" method="post">
-        {% csrf_token %}
-        <label>Login</label>
-        <input type="text" name="username">
-        <label>Hasło</label>
-        <input type="password" name="password">
-        <input type="submit" value="Zaloguj">
-    </form>
+
+
+<main class="pt-5">
+    <div class="container">
+        <div class="col-md-3 col-lg-2 order-md-first bg-light">
+            <div>
+                <h3>Logowanie</h3>
+            </div>
+            <form action="" method="post">
+                {% csrf_token %}
+                <label>Login:</label>
+                <input type="text" name="username">
+                <label>Hasło:</label>
+                <input type="password" name="password" style="margin-bottom: 10px;">
+                <input type="submit" class="btn btn-info" value="Zaloguj">
+            </form>
+        </div>
+    </div>
+</main>
 
 {% endblock content %}

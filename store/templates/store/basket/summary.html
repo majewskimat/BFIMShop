@@ -3,7 +3,6 @@
 {% block title %}Koszyk{% endblock %}
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/main.css' %}">
 
 <main class="pt-5">
   <div class="container">
@@ -22,7 +21,7 @@
           <div class="col border-bottom">
             <div class="row p-3">
               <div class="col-6">Cena</div>
-              <div class="col-6 text-end"><span class="h6 fw-bold">PLN{{ product.price }}</span></div>
+              <div class="col-6 text-end"><span class="h6 fw-bold">{{ product.price }} PLN</span></div>
             </div>
           </div>
           <div class="col">
@@ -55,8 +54,16 @@
     {% endwith %}
     {% endfor %}
     <div class="col-12 text-end">
-      <div class="h6 fw-bold">Sub Total: £<div id="subtotal" class="d-inline-flex">{{basket.get_total_price}}</div></div>
+      <div class="h6 fw-bold">Suma: <div id="subtotal" class="d-inline-flex">{{basket.get_total_price}} PLN</div></div>
     </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-12">
+          <div class="text-right">
+              <a href="{% url "store:order_completed" %}" class="btn btn-success" id="payment">Opłać zamówienie</a>
+          </div>
+      </div>
+  </div>
   </div>
 </main>
 

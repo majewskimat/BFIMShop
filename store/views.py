@@ -3,6 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, render 
 
+from basket.basket import Basket
+
 from .models import Category, Product
 
 
@@ -19,6 +21,10 @@ def category_list(request, category_slug=None):
     products = Product.objects.filter(category=category)
     return render(request, 'store/products/category.html', {'category': category, 'products': products })
 
+def order_completed(request):
+    basket = Basket(request)
+    basket.clear()
+    return render(request, 'store/payment/ordercompleted.html')   
 
 def about(request):
     return render(request, 'store/about.html')
@@ -26,6 +32,7 @@ def about(request):
 def contact(request):
     context = {}
     return render(request, 'store/contact.html')
+
 
 
 

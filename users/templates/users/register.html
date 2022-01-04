@@ -2,41 +2,44 @@
 {% load static %}
 {% block content %}
 
-    <div>
-        <h3>Rejestracja</h3>
-    </div>
-    <div>
-        <form method="post" action="">
-            {% csrf_token %}
+<main class="pt-5">
+    <div class="container">
+        <div class="col-md-3 col-lg-2 order-md-first bg-light">
             <div>
-            Nazwa użytkownika
+                <h3>Rejestracja</h3>
             </div>
-            <div>
-            {{form.username}}
-            </div>
-            <div>
-            E-mail
-            </div>
-            <div>
-            {{form.email}}
-            </div>
-            <div>
-            Hasło
-            </div> 
-            <div>
-            {{form.password1}}
-            </div>
-            <div>
-            Powtórz hasło
-            </div> 
-            <div>
-            {{form.password2}}
-            </div>
+            <form method="post" action="">
+                {% csrf_token %}
+                <div>
+                    Nazwa użytkownika
+                </div>
+                <div>
+                    {{form.username}}
+                </div>
+                <div>
+                    E-mail
+                </div>
+                <div>
+                    {{form.email}}
+                </div>
+                <div>
+                    Hasło
+                </div>
+                <div>
+                    {{form.password1}}
+                </div>
+                <div>
+                    Powtórz hasło
+                </div>
+                <div>
+                    {{form.password2}}
+                </div>
 
-            {{form.errors}}
-            
-            <input type="submit" value="Zarejestruj">
-        </form>
-    </div>
+                {{form.errors}}
 
+                <input type="submit" class="btn btn-info" value="Zarejestruj">
+            </form>
+        </div>
+    </div>
+</main>
 {% endblock content %}

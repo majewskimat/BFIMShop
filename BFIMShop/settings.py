@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'BFIMShop',
     'basket',
-    'crispy_forms'
+    #'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -114,6 +114,8 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+BASKET_SESSION_ID = 'basket'
 
 CRISPY_TEMPLATES_PACK = 'bootstrap4'
 
