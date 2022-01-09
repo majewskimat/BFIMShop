@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
-
+	<style>
+		body { background: rgb(229, 244, 248) !important; }
+	</style>
 <head>
 	<title>{% block title %}BFIMShop{% endblock %}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
@@ -24,32 +26,110 @@
 
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="/">BFIMShop</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+		<nav class="navbar-light color-brand">
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="{% url "store:about" %}">O nas <span class="sr-only"></span></a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="{% url "store:contact" %}">Kontakt <span class="sr-only"></span></a>
-					</li>
-				</ul>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 			viewBox="0 0 512 512" style="padding-left: 10px" xml:space="preserve">
+					<rect x="42.756" y="227.14" style="fill:#E9E9E9;" width="426.489" height="272.568"/>
+						<g>
+							<path style="fill:#DF7A6E;" d="M298.756,92.994c-4.427,0-8.017-3.588-8.017-8.017V59.324c0-4.428,3.589-8.017,8.017-8.017
+							c4.427,0,8.017,3.588,8.017,8.017v25.653C306.772,89.405,303.183,92.994,298.756,92.994z"/>
+							<path style="fill:#DF7A6E;" d="M213.244,92.994c-4.427,0-8.017-3.588-8.017-8.017V59.324c0-4.428,3.589-8.017,8.017-8.017
+							s8.017,3.588,8.017,8.017v25.653C221.261,89.405,217.672,92.994,213.244,92.994z"/>
+						</g>
+							<rect x="142.697" y="4.33" style="fill:#E9E9E9;" width="226.605" height="58.68"/>
+							<path style="fill:#DF7A6E;" d="M359.148,16.033v35.273H152.852V16.033H359.148 M367.165,0h-222.33c-4.427,0-8.017,3.588-8.017,8.017
+							v51.307c0,4.428,3.589,8.017,8.017,8.017h222.33c4.427,0,8.017-3.588,8.017-8.017V8.017C375.182,3.588,371.592,0,367.165,0
+							L367.165,0z"/>
+							<path style="fill:#FF8C78;" d="M495.432,187.591l-34.205,17.102l-34.205-17.102h-68.409l-34.205,17.102l-34.205-17.102h-68.409
+							l-34.205,17.102l-34.205-17.102H84.977l-34.205,17.102l-34.205-17.102l49.091-98.182c1.357-2.716,4.133-4.432,7.17-4.432H439.17
+							c3.037,0,5.813,1.716,7.17,4.432L495.432,187.591z"/>
+						<g>
+							<polygon style="fill:#FFD791;" points="221.795,84.977 290.205,84.977 290.205,187.591 256,204.693 221.795,187.591 	"/>
+							<polygon style="fill:#FFD791;" points="341.511,84.977 392.818,84.977 427.023,187.591 392.818,204.693 358.614,187.591 	"/>
+							<polygon style="fill:#FFD791;" points="119.182,84.977 170.489,84.977 153.386,187.591 119.182,204.693 84.977,187.591 	"/>
+						</g>
+						<g>
+							<path style="fill:#DF7A6E;" d="M16.568,187.591v42.756c0,18.891,15.314,34.205,34.205,34.205s34.205-15.314,34.205-34.205v-42.756
+							H16.568z"/>
+							<path style="fill:#DF7A6E;" d="M153.386,187.591v42.756c0,18.891,15.314,34.205,34.205,34.205s34.205-15.314,34.205-34.205v-42.756
+							H153.386z"/>
+							<path style="fill:#DF7A6E;" d="M290.205,187.591v42.756c0,18.891,15.314,34.205,34.205,34.205
+							c18.891,0,34.205-15.314,34.205-34.205v-42.756H290.205z"/>
+							<path style="fill:#DF7A6E;" d="M427.023,187.591v42.756c0,18.891,15.314,34.205,34.205,34.205s34.205-15.314,34.205-34.205v-42.756
+							H427.023z"/>
+						</g>
+						<g>
+							<path style="fill:#F8BE73;" d="M84.977,187.591v42.756c0,18.891,15.314,34.205,34.205,34.205s34.205-15.314,34.205-34.205v-42.756
+							H84.977z"/>
+							<path style="fill:#F8BE73;" d="M221.795,187.591v42.756c0,18.891,15.314,34.205,34.205,34.205s34.205-15.314,34.205-34.205v-42.756
+							H221.795z"/>
+							<path style="fill:#F8BE73;" d="M358.614,187.591v42.756c0,18.891,15.314,34.205,34.205,34.205s34.205-15.314,34.205-34.205v-42.756
+							H358.614z"/>
+						</g>
+							<rect x="204.693" y="290.205" style="fill:#A7A6A6;" width="102.614" height="213.779"/>
+							<rect x="204.693" y="290.205" style="fill:#918F90;" width="25.653" height="213.779"/>
+							<path style="fill:#DF7A6E;" d="M315.324,290.205c0-4.428-3.589-8.017-8.017-8.017H204.693c-4.427,0-8.017,3.588-8.017,8.017v209.503
+							h118.647V290.205z M299.29,495.967h-86.58V298.221h86.58V495.967z"/>
+							<rect x="350.063" y="290.205" style="fill:#6DDAE1;" width="68.409" height="85.511"/>
+						<g>
+							<polygon style="fill:#4FC4D4;" points="350.063,290.205 350.063,319.421 379.279,290.205 	"/>
+							<polygon style="fill:#4FC4D4;" points="399.232,290.205 350.063,339.374 350.063,375.716 362.889,375.716 418.472,320.134 
+							418.472,290.205 	"/>
+							<polygon style="fill:#4FC4D4;" points="385.692,375.716 418.472,375.716 418.472,342.936 	"/>
+						</g>
+							<path style="fill:#DF7A6E;" d="M435.574,367.699h-9.086v-77.495c0-4.428-3.589-8.017-8.017-8.017h-68.409
+							c-4.427,0-8.017,3.588-8.017,8.017v77.495h-9.086c-4.427,0-8.017,3.588-8.017,8.017c0,4.428,3.589,8.017,8.017,8.017h17.102h68.409
+							h17.102c4.427,0,8.017-3.588,8.017-8.017C443.591,371.288,440.001,367.699,435.574,367.699z M358.079,367.699v-69.478h52.376v69.478
+							H358.079z"/>
+							<rect x="92.994" y="290.205" style="fill:#6DDAE1;" width="68.409" height="85.511"/>
+						<g>
+							<polygon style="fill:#4FC4D4;" points="92.994,290.205 92.994,319.421 122.21,290.205 	"/>
+							<polygon style="fill:#4FC4D4;" points="142.163,290.205 92.994,339.374 92.994,375.716 105.82,375.716 161.403,320.134 
+							161.403,290.205 	"/>
+							<polygon style="fill:#4FC4D4;" points="128.623,375.716 161.403,375.716 161.403,342.936 	"/>
+						</g>
+							<path style="fill:#DF7A6E;" d="M178.505,367.699h-9.086v-77.495c0-4.428-3.589-8.017-8.017-8.017H92.994
+							c-4.427,0-8.017,3.588-8.017,8.017v77.495h-9.086c-4.427,0-8.017,3.588-8.017,8.017c0,4.428,3.589,8.017,8.017,8.017h17.102h68.409
+							h17.102c4.427,0,8.017-3.588,8.017-8.017C186.522,371.288,182.933,367.699,178.505,367.699z M101.01,367.699v-69.478h52.376v69.478
+							H101.01z"/>
+						<g>
+							<path style="fill:#C4DF64;" d="M163.006,410.455H92.459c-13.262,0-24.05,10.789-24.05,24.05v19.24
+							c0,13.261,10.788,24.05,24.05,24.05h70.547c13.262,0,24.05-10.789,24.05-24.05v-19.24
+							C187.056,421.245,176.268,410.455,163.006,410.455z"/>
+							<path style="fill:#C4DF64;" d="M419.541,410.455h-70.547c-13.262,0-24.05,10.789-24.05,24.05v19.24
+							c0,13.261,10.788,24.05,24.05,24.05h70.547c13.262,0,24.05-10.789,24.05-24.05v-19.24
+							C443.591,421.245,432.802,410.455,419.541,410.455z"/>
+						</g>
+						<g>
+							<path style="fill:#96CA62;" d="M68.409,435.93v17.815c0,13.261,10.788,24.05,24.05,24.05h70.547c13.262,0,24.05-10.789,24.05-24.05
+							V435.93H68.409z"/>
+							<path style="fill:#96CA62;" d="M324.944,435.93v17.815c0,13.261,10.788,24.05,24.05,24.05h70.547
+							c13.262,0,24.05-10.789,24.05-24.05V435.93H324.944z"/>
+						</g>
+						<g>
+							<path style="fill:#FF8C78;" d="M212.71,452.676c0-4.428-3.589-8.017-8.017-8.017H50.772c-4.427,0-8.017,3.588-8.017,8.017v47.031
+							H212.71V452.676z"/>
+							<path style="fill:#FF8C78;" d="M469.244,452.676c0-4.428-3.589-8.017-8.017-8.017H307.307c-4.427,0-8.017,3.588-8.017,8.017v47.031
+							h169.954V452.676z"/>
+						</g>
+							<path style="fill:#918F90;" d="M503.983,512H8.017C3.589,512,0,508.412,0,503.983s3.589-8.017,8.017-8.017h495.967
+							c4.427,0,8.017,3.588,8.017,8.017S508.411,512,503.983,512z"/>
+			</svg>
+							<a class="brand-color" style="font-size: 25px; padding-left:10px; padding-top:5px" href="\">BFIMShop</a>
 
-				<div class="form-inline my-2 my-lg-0">
+							<a href="{% url "store:about" %}">O nas <span class="sr-only"></span></a>
+							<a href="{% url "store:contact" %}">Kontakt <span class="sr-only"></span></a>
+
+							<div class="form-inline float-right" style="padding-top:10px; padding-right: 10px;"">
 					{% if request.user.is_authenticated %}
 					<span>Witaj, {{request.user}}</span>
 					<p>&nbsp&nbsp</p>
-					<a href="{% url "logout" %}" class="btn btn-info">Wyloguj</a>
+					<a href="{% url "logout" %}" class="btn btn-primary">Wyloguj</a>
 					{% else %}
-					<a href="{% url "login" %}" class="btn btn-info">Logowanie</a>
+					<a href="{% url "login" %}" class="btn btn-primary">Logowanie</a>
 					<p>&nbsp&nbsp</p>
-					<a href="{% url "register" %}" class="btn btn-info">Rejestracja</a>
+					<a href="{% url "register" %}" class="btn btn-primary">Rejestracja</a>
 					{% endif %}
 					<p>&nbsp&nbsp</p>
 					<a type="button" role="button" href="{% url "basket:basket_summary" %}"
@@ -72,6 +152,7 @@
 					</a>
 				</div>
 			</div>
+		</div>
 		</nav>
 	</header>
 
