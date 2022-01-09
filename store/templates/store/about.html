@@ -1,7 +1,47 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
+<style>
+    body { background: rgb(229, 244, 248) !important; }
+  </style>
 
-<h2>O nas</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="text-center text-dark mt-5">Panel logowania</h2>
+      <div class="card my-5">
+
+        <form class="card-body cardbody-color p-lg-5 border">
+
+          <div class="text-center">
+            <img src="\media\images\shop-assistant.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+              width="200px" alt="profile">
+          </div>
+
+          <div class="direct-contact-container">
+
+            <ul class="contact-list">
+              <li class="list-item">Lokaliacja: Poznań, Polska</li>
+              
+              <li class="list-item"><span class="contact-text"><a href="https://github.com/majewskimat/BFIMShop" title="Zapraszamy na naszego githuba!">Github</a></span></li>
+              
+              <a class="list-item">Twórcy:</a>
+
+              <ul>
+                <li class="list-item">Bartek Łuczak</li>
+                <li class="list-item">Mateusz Majewski</li>
+                <li class="list-item">Filip Czaplejewski</li>
+                <li class="list-item">Iwo Ławniczak</li>
+              </ul>
+              
+            </ul>
+
+            <div class="copyright">&copy; 2022 BFIMShop</div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 {% endblock %}
