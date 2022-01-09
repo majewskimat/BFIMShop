@@ -3,21 +3,25 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-
+<style>
+  body { background: rgb(229, 244, 248) !important; }
+</style>
 <main>
-
+  <div class="container">
     <section class="py-5 text-center container">
       <div class="row py-lg-3">
         <div class="col-lg-6 col-md-8 mx-auto">
           <h1 class="h1 fw-bold">Wybierz kategorie</h1>
-          <p class="lead text-muted">Albo wpierdol</p>
+          <p class="lead text-muted">____________</p>
           <div class="bd-example">
             <div class="dropdown"> 
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Kategoria
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="{% url "store:product_all" %}">Wszystkie produkty</a></li>
+                <li>
+                  <a class="dropdown-item" href="{% url "store:product_all" %}">Wszystkie produkty</a>
+                </li>
                 {% for c in categories %}
                 <li>
                   <a class="dropdown-item" href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
@@ -25,8 +29,7 @@
                 {% endfor %}
               </div>
             </div>
-            </div>
-          
+          </div>  
         </div>
       </div>
     </section>
@@ -34,14 +37,13 @@
     <div class="album py-5 bg-light">
       <div class="container">
   
-        <div class="pb-3 h5">Wszystkie produkty</div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
   
           {% for product in products %}
   
           <div class="col">
             <div class="card shadow-sm">
-              <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}">
+              <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}" style="height: 150px; width:300px;">
               <div class="card-body">
                 <p class="card-text">
                   <a class="text-dark text-decoration-none" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
@@ -58,8 +60,7 @@
         </div>
       </div>
     </div>
-  
-  
-  </main>
+  </div>
+</main>
 
 {% endblock %} 

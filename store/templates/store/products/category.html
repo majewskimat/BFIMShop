@@ -4,9 +4,11 @@
 {% if category %}{{ category.name }}{% else %}Products{%endif %}
 {% endblock %}
 {% block content %}
-
+<style>
+  body { background: rgb(229, 244, 248) !important; }
+</style>
+<main>
 <div class="container">
-
   <section class="py-5 text-center container">
     <div class="row py-lg-3">
       <div class="col-lg-6 col-md-8 mx-auto">
@@ -41,7 +43,7 @@
 
         <div class="col">
           <div class="card shadow-sm">
-            <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}">
+            <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}" style="height: 150px; width:300px;">
             <div class="card-body">
               <p class="card-text">
                 <a class="text-dark text-decoration-none" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
@@ -52,12 +54,12 @@
             </div>
           </div>
         </div>
-</div>
       {% endfor %}
-
     </div>
   </div>
 </div>
+</div>
+</main>
 
 
 
