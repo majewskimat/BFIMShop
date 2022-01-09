@@ -41,19 +41,24 @@
 
                             </div>
                             {% if request.user.is_authenticated %}
+<<<<<<< HEAD
                             <div class="col-6 text-end"><button type="button" id="add-button" value="{{product.id}}"
                                     class="btn btn-secondary btn-sm">Dodaj do koszyka</button></div>
                             {% endif %}
 
+=======
+                            <div class="col-6 text-end"><button type="button" id="add-button" value="{{product.id}}" class="btn btn-secondary btn-sm">Dodaj do koszyka</button></div>
+                            {% endif %}
+                            </div>
+>>>>>>> master
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
+    </div>
 </div>
-
 <script>
     $(document).on('click', '#add-button', function (e) {
         e.preventDefault();
