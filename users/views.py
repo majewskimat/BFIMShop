@@ -34,6 +34,3 @@ def loginUser(request):
 def logoutUser(request):
     logout(request)
     return redirect('login')
-
-def error404(request, exception):
-    return render(request, 'users/404.html')
