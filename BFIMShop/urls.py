@@ -28,9 +28,7 @@ urlpatterns = [
     path('logout/', user_view.logoutUser, name='logout'),
     path('', include('store.urls', namespace='store')),
     path('basket/', include('basket.urls', namespace='basket')), 
-
-
-]
+    ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
