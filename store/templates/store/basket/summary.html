@@ -12,7 +12,7 @@
     {% with product=item.product %}
     <div data-index="{{product.id}}" class="row mb-4 border product-item">
       <div class="col-md-3 col-lg-2 order-md-first bg-light">
-        <img class="img-fluid mx-auto d-block" width="120px" alt="Responsive image" src="{{ product.image.url }}">
+        <img class="img-fluid mx-auto d-block" width="300px" height="150px" alt="Responsive image" src="{{ product.image.url }}">
       </div>
       <div class="col-md-9 col-lg-10 ps-md-3 ps-lg-10">
         <a href="{{ product.get_absolute_url }}" class="text-decoration-none text-reset">
@@ -37,6 +37,7 @@
                   <option value="">2</option>
                   <option value="">3</option>
                   <option value="">4</option>
+                  <option value="">5</option>
                 </select>
                 <button type="button" id="update-button" data-index="{{product.id}}"
                   class="btn btn-outline-secondary btn-sm update-button">
