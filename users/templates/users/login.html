@@ -1,25 +1,37 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
+<style>
+    body { background: rgb(229, 244, 248) !important; }
+</style>
 
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="text-center text-dark mt-5">Panel logowania</h2>
+        <div class="card my-5">
 
+          <form class="card-body cardbody-color p-lg-5 border" method="post">
 
-<main class="pt-5">
-    <div class="container">
-        <div class="col-md-3 col-lg-2 order-md-first bg-light">
-            <div>
-                <h3>Logowanie</h3>
+            <div class="text-center">
+              <img src="\media\images\shop-assistant.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                width="200px" alt="profile">
             </div>
-            <form action="" method="post">
-                {% csrf_token %}
-                <label>Login:</label>
-                <input type="text" name="username">
-                <label>Hasło:</label>
-                <input type="password" name="password" style="margin-bottom: 10px;">
-                <input type="submit" class="btn btn-info" value="Zaloguj">
-            </form>
+            {% csrf_token %}
+            <div class="mb-3">
+              <input type="text" class="form-control" name="username" aria-describedby="username"
+                placeholder="Nazwa użytkownika">
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" name="password" placeholder="Hasło">
+            </div>
+            <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">Zaloguj się</button></div>
+            <div id="emailHelp" class="form-text text-center mb-5 text-dark">Nie posiadasz konta? <a href="{% url "register" %}" class="text-dark fw-bold"> Załóż konto tutaj!</a>
+            </div>
+          </form>
         </div>
-    </div>
-</main>
 
+      </div>
+    </div>
+  </div>
 {% endblock content %}

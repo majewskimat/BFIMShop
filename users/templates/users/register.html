@@ -1,45 +1,53 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
+<style>
+    body { background: rgb(229, 244, 248) !important; }
+</style>
 
-<main class="pt-5">
-    <div class="container">
-        <div class="col-md-3 col-lg-2 order-md-first bg-light">
-            <div>
-                <h3>Rejestracja</h3>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="text-center text-dark mt-5">Panel rejestracji</h2>
+        <div class="card my-5">
+
+          <form class="card-body cardbody-color p-lg-5 border" method="post">
+
+            <div class="text-center">
+              <img src="\media\images\shop-assistant.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                width="200px" alt="profile">
             </div>
-            <form method="post" action="">
-                {% csrf_token %}
-                <div>
-                    Nazwa użytkownika
-                </div>
-                <div>
-                    {{form.username}}
-                </div>
-                <div>
-                    E-mail
-                </div>
-                <div>
-                    {{form.email}}
-                </div>
-                <div>
-                    Hasło
-                </div>
-                <div>
-                    {{form.password1}}
-                </div>
-                <div>
-                    Powtórz hasło
-                </div>
-                <div>
-                    {{form.password2}}
-                </div>
-
-                {{form.errors}}
-
-                <input type="submit" class="btn btn-info" value="Zarejestruj">
-            </form>
+            {% csrf_token %}
+            <div class="col-6 mx-auto control-label text-center">
+                Nazwa użytkownika
+            </div>
+            <div class="col-6 mx-auto">
+                {{form.username}}
+            </div>
+            <div class="col-6 mx-auto control-label text-center">
+                E-mail
+            </div>
+            <div class="col-6 mx-auto">
+                {{form.email}}
+            </div>
+            <div class="col-6 mx-auto control-label text-center">
+                Hasło
+            </div>
+            <div class="col-6 mx-auto">
+                {{form.password1}}
+            </div>
+            <div class="col-6 mx-auto control-label text-center">
+                Powtórz hasło
+            </div>
+            <div class="col-6 mx-auto">
+                {{form.password2}}
+            </div>
+            {{form.errors}}
+            <input type="submit" class="btn btn-color px-5 mb-5 w-100" value="Zarejestruj">
+          </form>
         </div>
+
+      </div>
     </div>
-</main>
+  </div>
 {% endblock content %}
