@@ -35,7 +35,7 @@ def contact(request):
 
 def contact_success(request):
     context = {}
-    return render(request, 'store/contact/contact_success.html') 
+    return render(request, 'store/contact/contactsuccess.html') 
 
 
 
